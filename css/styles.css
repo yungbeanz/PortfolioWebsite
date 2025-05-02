@@ -1,0 +1,68 @@
+/* Global variables.*/
+:root {
+	--main-background-color: rgba(96, 109, 121, 1);
+	--secondary-background-color: rgba(225, 225, 225, 1);
+	--main-text-color: rgba(36, 49, 61, 1);
+	--secondary-text-color: rgba(256, 256, 256, 1);
+	--third-text-color: rgba(0, 0, 0, 1);
+	--widget-color: rgba(96, 109, 121, 0.95);
+	--button-color: rgba(128, 0, 0, 0.5);
+	
+	/* Customizing Predefined Bootstrap Variables. */
+	--bs-tertiary-bg-rgb: 96, 109, 121;
+}
+
+/* Initialize images to always span the full width of their containers. */
+
+img {
+	width:100%;
+}
+
+/* Override -index of navbar so that it doesn't fall behind images and other media. */
+header {
+	z-index: 2;
+}
+
+/* Override navbar colors. */
+.navbar {
+	--bs-navbar-brand-color: var(--main-text-color) !important;
+}
+.navbar-nav {
+	--bs-nav-link-color: var(--secondary-background-color) !important;
+}
+
+/* Override nav button background color. */
+button.navbar-toggler {
+	background-color: var(--button-color);
+}
+
+/* Reusing previous css code to make Hero image responsive and scale normally. */
+#hero {
+	background-image: url("../images/hero.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: local;
+	box-shadow: 0 0 2em rgba(0, 0, 0, 0.8) inset;
+}
+
+
+
+/* Overriding button colors. */
+.btn, .btn-primary {
+	background-color: var(--button-color);	
+	--bs-btn-bg: var(--button-color);
+    --bs-btn-bg: var(--button-color);
+    --bs-btn-border-color: var(--button-color);
+    --bs-btn-hover-color: var(--button-color);
+    --bs-btn-hover-bg: var(--button-color);
+    --bs-btn-hover-border-color: var(--button-color);
+    --bs-btn-focus-shadow-rgb: var(--button-color);
+    --bs-btn-active-color: var(--button-color);
+    --bs-btn-active-bg: var(--button-color);
+    --bs-btn-active-border-color: #var(--button-color);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: var(--button-color);
+    --bs-btn-disabled-bg: var(--button-color);
+    --bs-btn-disabled-border-color: var(--button-color);
+}
