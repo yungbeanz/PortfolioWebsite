@@ -16,6 +16,7 @@
 
 img {
 	width:100%;
+	z-index: 1;
 }
 
 /* Override -index of navbar so that it doesn't fall behind images and other media. */
@@ -23,7 +24,7 @@ header {
 	z-index: 2;
 }
 
-/* Override navbar colors. */
+/* Override bootstrap navbar colors. */
 .navbar {
 	--bs-navbar-brand-color: var(--main-text-color) !important;
 }
@@ -31,7 +32,7 @@ header {
 	--bs-nav-link-color: var(--secondary-background-color) !important;
 }
 
-/* Override nav button background color. */
+/* Override bootstrap nav button background color. */
 button.navbar-toggler {
 	background-color: var(--button-color);
 }
@@ -48,7 +49,7 @@ button.navbar-toggler {
 
 
 
-/* Overriding button colors. */
+/* Overriding bootstrap button colors. */
 .btn, .btn-primary {
 	background-color: var(--button-color);	
 	--bs-btn-bg: var(--button-color);
@@ -65,4 +66,54 @@ button.navbar-toggler {
     --bs-btn-disabled-color: var(--button-color);
     --bs-btn-disabled-bg: var(--button-color);
     --bs-btn-disabled-border-color: var(--button-color);
+}
+
+.about-image-container::before {
+	position: absolute;
+	content: ' ';
+	height: 45vh;
+	background-color: var(--main-text-color);
+	width: 1px;
+	z-index: 0;
+}
+
+#contact {
+	background-image: url("../images/contact.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: local;
+	box-shadow: 0 0 2em rgba(0, 0, 0, 0.8) inset;
+}
+
+#skills {
+	background-image: linear-gradient(var(--secondary-background-color), var(--main-background-color), var(--main-background-color), var(--main-background-color), var(--main-background-color), var(--main-background-color));
+}
+
+#portfolio {
+	background-image: linear-gradient(var(--main-background-color), var(--secondary-background-color), var(--secondary-background-color), var(--secondary-background-color), var(--secondary-background-color), var(--secondary-background-color), var(--main-background-color));
+}
+
+#about {
+	background-color: var(--main-background-color);
+}
+
+#cv {
+	background-image: linear-gradient(var(--main-background-color), var(--secondary-background-color), var(--secondary-background-color), var(--secondary-background-color), var(--secondary-background-color), var(--secondary-background-color), var(--secondary-background-color));
+}
+
+#contact {
+	text-shadow: 1px 1px var(--secondary-text-color);	
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) {
+.about-image-container::before {
+	position: absolute;
+	content: ' ';
+	height: 30vh;
+	background-color: var(--main-text-color);
+	width: 1px;
+	z-index: 0;
+}	
 }
